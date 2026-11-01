@@ -1,59 +1,84 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <!-- the entire body must be written by student -->
+  <script type="text/javascript" src="./script.js"></script>
 
-	<form  method="post">
-		<label for="Name">Name</label>
-		<input  type="Text" required="yes" id="name" placeholder="Name"></input>
+  <form method="post">
+    <!-- Name Field -->
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+    </div>
 
-		<br>
-		<label for="Email">Email</label>
-		<input type="Email" required="yes" id="email" placeholder="Email">
-		<br>
-		<label for="Gender">Gender</label>
-		<input type="Radio" required="yes" id="gender_m"  name="gender" >
-		<input type="Radio" required="yes" id="gender_f"  name="gender">
-		
-		<br>
-		<label for="Car Brands">Car Brands</label>
-		<select  required="yes" id="cars">
-			<option>Audi</option>
-			<option>TATA</option>
-			<option>Mahindra</option>
-		</select>
-		<br>
-			<label for="Age">Age</label>
-		<input type="Number" required="yes" id="age" placeholder="Age" >
-		<br>
-			<label for="DOB">DOB</label>
-		<input type="Date" required="yes" id="dob" >
-		
-		<br>
-			<label for="Phone Number">Phone Number</label>
-		<input type="Tel" required="no" id="tel" placeholder="xxx-xxx-xxxx">
-		
-		<br>
+    <!-- Email Field -->
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
 
-			<label for="Password">Password</label>
-		<input type="Password" required="yes" id="password" placeholder="Password">
-		<br>
+    <!-- Gender Field -->
+    <div>
+      <p>Gender</p>
+      <input type="radio" id="gender_m" name="gender" value="male" required>
+      <label for="gender_m">Male</label>
+      
+      <input type="radio" id="gender_f" name="gender" value="female" required>
+      <label for="gender_f">Female</label>
+    </div>
+    
+    <!-- Car Brands Dropdown -->
+    <div>
+      <label for="cars">Car Brands</label>
+      <select id="cars" name="cars" required>
+        <option value="" disabled selected>Select a brand</option>
+        <option value="audi">Audi</option>
+        <option value="tata">TATA</option>
+        <option value="mahindra">Mahindra</option>
+      </select>
+    </div>
 
-			<label for="I agree to the TOS">I agree to the TOS</label>
-		<input type="Checkbox" required="yes" id="tos" >
-		<br>
-		<label for="submit">Submit</label>
-		<input type="submit"></input>
-	</form>
+    <!-- Age Field -->
+    <div>
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Age" required>
+    </div>
+
+    <!-- DOB Field -->
+    <div>
+      <label for="dob">DOB</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+    
+    <!-- Phone Number Field (Optional) -->
+    <div>
+      <label for="tel">Phone Number</label>
+      <!-- Removed 'required="no"' entirely since it is optional -->
+      <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+    </div>
+
+    <!-- Password Field -->
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+    </div>
+
+    <!-- TOS Checkbox -->
+    <div>
+      <input type="checkbox" id="tos" name="tos" required>
+      <label for="tos">I agree to the TOS</label>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 
 </body>
-
 </html>
